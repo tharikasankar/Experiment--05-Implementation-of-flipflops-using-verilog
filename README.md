@@ -102,39 +102,98 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
 ### Procedure
-/* write all the steps invloved */
+1.Create a project with required entities. 2.Create a module along with respective file name. 3.Run the respective programs for the given boolean equations. 4.Run the module and get the respective RTL outputs. 5.Create university program(VWF) for getting timing diagram. 6.Give the respective inputs for timing diagram and obtain the results.
 
+SR flipflop:
+
+Program for flipflops  and verify its truth table in quartus using Verilog programming.
 
 
 ### PROGRAM 
-/*
+
+module de05(S,R,CLK,Q,QBAR);
+input S,R,CLK;
+output Q,QBAR;
+wire X,Y;
+nand(X,S,CLK);
+nand(Y,R,CLK);
+nand(Q,X,QBAR);
+nand(QBAR,Y,Q);
+endmodule
+
+  
+### RTL LOGIC:
+
+![image](https://user-images.githubusercontent.com/119475507/214629586-9e989406-7b80-499d-9928-0a3a7add5fb2.png)
+
+### TIMING DIGRAMS 
+![image](https://user-images.githubusercontent.com/119475507/214629883-ae5cb542-6f53-4bf1-9333-7914e67b7b28.png)
+
+JK Flipflop:
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+
+PROGRAM:
+
+module de051(J,K,CLK,Q,QBAR);
+input J,K,CLK;
+output Q,QBAR;
+wire P,S;
+nand(P,J,CLK,QBAR);
+nand(S,K,CLK,Q);
+nand(Q,P,QBAR);
+nand(QBAR,S,Q);
+endmodule
+
+### RTL LOGIC:
+![image](https://user-images.githubusercontent.com/119475507/214630430-0a61e83a-c9f2-4089-b3dd-fc50de23a03c.png)
+
+### TIMING DIGRAMS 
+![image](https://user-images.githubusercontent.com/119475507/214630569-1002c6de-6d64-4bf6-a7c3-0f6a5c32c249.png)
+
+D Flipflop:
+Program for flipflops  and verify its truth table in quartus using Verilog programming.
+
+PROGRAM:
+
+module de052(D,CLK,Q,QBAR);
+input D,CLK;
+output Q,QBAR;
+assign DBAR=~D;
+wire X,Y;
+nand(X,D,CLK);
+nand(Y,DBAR,CLK);
+nand(Q,X,QBAR);
+nand(QBAR,Y,Q);
+endmodule
+
+### RTL LOGIC:
+![image](https://user-images.githubusercontent.com/119475507/214630929-90a20666-7b09-47a6-b900-1d8b9289fbdc.png)
+
+### TIMING DIGRAMS 
+![image](https://user-images.githubusercontent.com/119475507/214631469-f486bce8-5950-4383-8824-3f19853180b3.png)
 
 
+T Flipflop:
+Program for flipflops  and verify its truth table in quartus using Verilog programming.
 
+PROGRAM:
 
+module de54(T,CLK,Q,QBAR);
+input T,CLK;
+output Q,QBAR;
+wire S,R;
+nand(S,T,CLK,QBAR);
+nand(R,T,CLK,Q);
+nand(Q,S,QBAR);
+nand(QBAR,R,Q);
+endmodule
 
+### RTL LOGIC:
+![image](https://user-images.githubusercontent.com/119475507/214631807-e2b47909-94b3-4891-a593-7308d1f143a7.png)
 
-### RTL LOGIC FOR FLIPFLOPS 
-
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS FOR FLIP FLOPS 
-
-
-
-
-
-
+### TIMING DIGRAMS 
+![image](https://user-images.githubusercontent.com/119475507/214631991-b954a902-f275-4b43-ab62-15f70abfa6c8.png)
 
 
 ### RESULTS 
+Hence all the flipflops are implemented using verilog and their functionality has been validated using their functional tables.
