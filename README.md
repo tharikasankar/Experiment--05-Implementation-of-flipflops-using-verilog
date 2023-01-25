@@ -130,6 +130,7 @@ endmodule
 ![image](https://user-images.githubusercontent.com/119475507/214629883-ae5cb542-6f53-4bf1-9333-7914e67b7b28.png)
 
 JK Flipflop:
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 
 PROGRAM:
@@ -151,6 +152,7 @@ endmodule
 ![image](https://user-images.githubusercontent.com/119475507/214630569-1002c6de-6d64-4bf6-a7c3-0f6a5c32c249.png)
 
 D Flipflop:
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 
 PROGRAM:
@@ -174,6 +176,7 @@ endmodule
 
 
 T Flipflop:
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 
 PROGRAM:
